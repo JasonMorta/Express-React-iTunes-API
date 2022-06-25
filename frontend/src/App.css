@@ -1,0 +1,375 @@
+.App {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(0.625rem + 2vmin);
+  color: white;
+  position: relative;
+  display: flex;
+  background-image: url('./ptn1.gif');
+}
+
+body {
+  padding-right: 0px !important;
+}
+
+.iTune-container {
+  max-width: 50rem;
+  /* height: 56.25rem; */
+  position: relative;
+  background-color: #F5F5F5;
+  padding: 0.625rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.625rem;
+
+}
+
+.input-group {
+  width: 75%;
+  align-items: center;
+  margin: auto;
+}
+
+.btn-check:focus+.btn-outline-secondary, .btn-outline-secondary:focus {
+  box-shadow: inset 0 0 0 0.25rem rgb(108 117 125 / 50%);
+}
+
+.header-content {
+  display: flex;
+  justify-content: center;
+}
+
+.header-content img {
+  margin: 1.25rem;
+  margin-bottom: 0rem;
+}
+
+.navigation-container {
+  color: black;
+}
+
+.mb-3 {
+  position: relative;
+}
+
+.music-thead {
+  margin: auto;
+}
+
+.fav-counter {
+  background-color: #f44336;
+  font-size: 0.9375rem;
+  border-radius: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+  color: white;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.favBtn-container {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  right: 0.75rem;
+  top: 35%;
+}
+
+.favorites {
+  border-radius: 50%;
+  padding: 0.625rem;
+  background-color: #8f15ad;
+  border: 0px;
+  font-size: small;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0.3125rem;
+  z-index: 1;
+}
+
+tbody img {
+  margin: 0.1875rem;
+}
+
+tbody tr {
+  vertical-align: middle;
+}
+
+tbody tr:hover {
+  background-image: url(./bg.png);
+
+}
+
+.tab-pane {
+  overflow: auto;
+width: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 0.625rem;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #8f15ad; 
+  border-radius: 0.625rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #641179; 
+}
+
+
+.tab-content>.active {
+  box-shadow: inset 0px 0px 2.75rem -1.4375rem #0096af;
+  border-radius: 0.3125rem;
+  background: linear-gradient(320deg, #a2c5ec, #e8e8ea);
+  background-size: 400% 400%;
+  height: 29.75rem;
+
+  -webkit-animation: AnimationName 15s ease infinite;
+  -moz-animation: AnimationName 15s ease infinite;
+  animation: AnimationName 15s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 4% 0%
+  }
+
+  50% {
+    background-position: 97% 100%
+  }
+
+  100% {
+    background-position: 4% 0%
+  }
+}
+
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 4% 0%
+  }
+
+  50% {
+    background-position: 97% 100%
+  }
+
+  100% {
+    background-position: 4% 0%
+  }
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 4% 0%
+  }
+
+  50% {
+    background-position: 97% 100%
+  }
+
+  100% {
+    background-position: 4% 0%
+  }
+}
+
+.modalBtn {
+  padding: 0.625rem !important;
+  background-color: #8f15ad !important;
+  border: 0px !important;
+}
+
+.modal-body {
+  overflow: auto;
+  height: 60vh;
+}
+
+.modalBtn:focus,
+.favorites:focus {
+  background-color: #9c27b0 !important;
+  border-color: #9c27b0 !important;
+  box-shadow: 0 0 0 0.25rem rgb(156 39 176 / 45%) !important;
+
+}
+
+.modalBtn:active,
+.favorites:active {
+  background-color: #008596 !important;
+}
+
+.modalBtn:hover,
+.favorites:hover {
+  background-color: #be45d2 !important;
+}
+
+.delete-block {
+  fill: #ce93d8;
+  text-align: center;
+}
+
+.delete-block svg:hover {
+  fill: red;
+}
+
+.card {
+  font-size: medium;
+  box-shadow: 0.0625rem 0.0625rem 0.1875rem #808080f7;
+  transition: .5s;
+  padding: 0.1875rem;
+}
+
+.card-body {
+  padding: .3rem .3rem;
+  font-size: small;
+}
+
+.card-title {
+  font-size: medium !important;
+}
+
+.card::after {
+  content: "";
+  width: 0%;
+  height: 0.1875rem;
+  transition: 1s;
+  margin: auto;
+}
+
+.card:hover::after {
+  content: "";
+  width: 100%;
+  height: 0.1875rem;
+  background-color: #9c27b0;
+  transition: .5s;
+}
+
+
+.music-videos-card {
+  max-height: 29.0625rem;
+  width: 100%;
+  margin: 0;
+}
+
+.movie-card {
+  max-height: 29.0625rem;
+  width: 100%;
+  margin: 0;
+  padding-bottom: 1.875rem;
+}
+
+.movie-card .card {
+  max-height: none;
+}
+
+.tv-card {
+  margin-bottom: .1rem;
+  border-bottom: 1px solid #8080802b;
+}
+
+.nav-link {
+
+  color: #2196f3;
+}
+
+.loader {
+  font-size: 0.625rem;
+  margin: 0px;
+  overflow: hidden;
+  text-indent: -9999em;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: #48db8f;
+  background: -moz-linear-gradient(left, #48db8f 10%, rgba(72, 219, 143, 0) 42%);
+  background: -webkit-linear-gradient(left, #48db8f 10%, rgba(72, 219, 143, 0) 42%);
+  background: -o-linear-gradient(left, #48db8f 10%, rgba(72, 219, 143, 0) 42%);
+  background: -ms-linear-gradient(left, #48db8f 10%, rgba(72, 219, 143, 0) 42%);
+  background: linear-gradient(to right, #48db8f 10%, rgba(72, 219, 143, 0) 42%);
+  position: relative;
+  -webkit-animation: load3 .5s infinite linear;
+  animation: load3 .5s infinite linear;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.loader:before {
+  width: 50%;
+  height: 50%;
+  background: #48db8f;
+  border-radius: 100% 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+}
+
+.loader:after {
+  background: #ffffff;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  content: '';
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+@-webkit-keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.search-heading {
+  color: #0096af;
+  display: flex;
+  justify-content: center;
+}
+
+.form-control:focus {
+  color: #212529;
+  background-color: #f5f5f5;
+  border-color: #0096af;
+  outline: 0;
+  box-shadow: inset 0 0 0 0.19rem rgb(0 150 175 / 28%);
+}
