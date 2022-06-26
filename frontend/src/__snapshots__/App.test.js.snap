@@ -1,0 +1,309 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="App"
+>
+  <div
+    className="iTune-container"
+  >
+    <div
+      className="header-content"
+    >
+      <img
+        alt="design-logo"
+        src="logo.png"
+      />
+    </div>
+    <div>
+      <div
+        className="search-container"
+      >
+        <div
+          className="search-heading"
+        >
+          <p>
+            Enter a name to search for
+          </p>
+        </div>
+        <div
+          className="search-bar"
+        >
+          <div
+            className="mb-3 input-group has-validation"
+          >
+            <input
+              aria-describedby="basic-addon2"
+              aria-label="Search.."
+              className="form-control"
+              onChange={[Function]}
+              placeholder="Search.."
+              required={true}
+              value=""
+            />
+            <button
+              className="btn btn-outline-secondary"
+              disabled={false}
+              id="button-addon2"
+              onClick={[Function]}
+              type="button"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="favBtn-container"
+    >
+      <button
+        className="favorites btn btn-primary"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        Favs
+      </button>
+    </div>
+    <div
+      className="navigation-container"
+    >
+      <ul
+        className="mb-3 nav nav-tabs"
+        onKeyDown={[Function]}
+        role="tablist"
+      >
+        <li
+          className="nav-item"
+          role="presentation"
+        >
+          <button
+            aria-controls="uncontrolled-tab-example-tabpane-tab1"
+            aria-selected={true}
+            className="nav-link active"
+            data-rr-ui-event-key="tab1"
+            disabled={false}
+            id="uncontrolled-tab-example-tab-tab1"
+            onClick={[Function]}
+            role="tab"
+            type="button"
+          >
+            Music
+          </button>
+        </li>
+        <li
+          className="nav-item"
+          role="presentation"
+        >
+          <button
+            aria-controls="uncontrolled-tab-example-tabpane-tab2"
+            className="nav-link"
+            data-rr-ui-event-key="tab2"
+            disabled={false}
+            id="uncontrolled-tab-example-tab-tab2"
+            onClick={[Function]}
+            role="tab"
+            tabIndex={-1}
+            type="button"
+          >
+            Music Videos
+          </button>
+        </li>
+        <li
+          className="nav-item"
+          role="presentation"
+        >
+          <button
+            aria-controls="uncontrolled-tab-example-tabpane-tab3"
+            className="nav-link"
+            data-rr-ui-event-key="tab3"
+            disabled={false}
+            id="uncontrolled-tab-example-tab-tab3"
+            onClick={[Function]}
+            role="tab"
+            tabIndex={-1}
+            type="button"
+          >
+            Movies
+          </button>
+        </li>
+        <li
+          className="nav-item"
+          role="presentation"
+        >
+          <button
+            aria-controls="uncontrolled-tab-example-tabpane-tab4"
+            className="nav-link"
+            data-rr-ui-event-key="tab4"
+            disabled={false}
+            id="uncontrolled-tab-example-tab-tab4"
+            onClick={[Function]}
+            role="tab"
+            tabIndex={-1}
+            type="button"
+          >
+            Podcasts
+          </button>
+        </li>
+        <li
+          className="nav-item"
+          role="presentation"
+        >
+          <button
+            aria-controls="uncontrolled-tab-example-tabpane-tab5"
+            className="nav-link"
+            data-rr-ui-event-key="tab5"
+            disabled={false}
+            id="uncontrolled-tab-example-tab-tab5"
+            onClick={[Function]}
+            role="tab"
+            tabIndex={-1}
+            type="button"
+          >
+            TV Shows
+          </button>
+        </li>
+      </ul>
+      <div
+        className="tab-content"
+      >
+        <div
+          aria-labelledby="uncontrolled-tab-example-tab-tab1"
+          className="fade tab-pane active show"
+          id="uncontrolled-tab-example-tabpane-tab1"
+          role="tabpanel"
+          style={
+            Object {
+              "fontSize": "1rem",
+              "overflow": "auto",
+            }
+          }
+        >
+          <div
+            className="table-responsive"
+          >
+            <table
+              className="table table-striped table-bordered table-hover"
+              onClick={[Function]}
+            >
+              <thead>
+                <tr
+                  className="music-thead"
+                >
+                  <th>
+                    #
+                  </th>
+                  <th>
+                    Name
+                  </th>
+                  <th>
+                    Artist
+                  </th>
+                  <th>
+                    Album
+                  </th>
+                  <th>
+                    Time
+                  </th>
+                  <th>
+                    Fav
+                  </th>
+                </tr>
+              </thead>
+              <tbody
+                style={
+                  Object {
+                    "fontSize": "1rem",
+                  }
+                }
+              />
+            </table>
+          </div>
+        </div>
+        <div
+          aria-labelledby="uncontrolled-tab-example-tab-tab2"
+          className="fade tab-pane"
+          id="uncontrolled-tab-example-tabpane-tab2"
+          role="tabpanel"
+        >
+          <div
+            className="g-4 music-videos-card row row-cols-md-4 row-cols-2"
+          />
+        </div>
+        <div
+          aria-labelledby="uncontrolled-tab-example-tab-tab3"
+          className="fade tab-pane"
+          id="uncontrolled-tab-example-tabpane-tab3"
+          role="tabpanel"
+        >
+          <div
+            className="g-4 movie-card row row-cols-md-4 row-cols-2"
+          />
+        </div>
+        <div
+          aria-labelledby="uncontrolled-tab-example-tab-tab4"
+          className="fade tab-pane"
+          id="uncontrolled-tab-example-tabpane-tab4"
+          role="tabpanel"
+          style={
+            Object {
+              "fontSize": "1rem",
+              "overflow": "auto",
+            }
+          }
+        >
+          <table
+            className="table table-striped table-bordered table-hover"
+          >
+            <thead>
+              <tr
+                className="music-thead"
+              >
+                <th>
+                  #
+                </th>
+                <th>
+                  Name
+                </th>
+                <th>
+                  Provider
+                </th>
+                <th>
+                  Podcasts
+                </th>
+                <th>
+                  Time
+                </th>
+                <th>
+                  Fav
+                </th>
+              </tr>
+            </thead>
+            <tbody
+              style={
+                Object {
+                  "fontSize": "1rem",
+                }
+              }
+            />
+          </table>
+        </div>
+        <div
+          aria-labelledby="uncontrolled-tab-example-tab-tab5"
+          className="fade tab-pane"
+          id="uncontrolled-tab-example-tabpane-tab5"
+          role="tabpanel"
+        >
+          <div
+            className="g-4 movie-card tv-card row row-cols-md-4 row-cols-2"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="footer-content"
+    />
+  </div>
+</div>
+`;
