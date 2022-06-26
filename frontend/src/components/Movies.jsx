@@ -4,15 +4,16 @@ import Row from "react-bootstrap/Row";
 import FavIcon from "./FavIcon";
 import { nanoid } from "nanoid";
 
+//This component will be exported to the NavigationTabs component, and rendered there.
 function Movies(props) {
-  function updateFavCounter() {
+  function updateFavCounter(){
     return props.updateFavCounter();
   }
 
   //md: items per row
   //xs: mobile view grouping = 2 items next to each other
   return (
-    <Row xs={2}  md={4} className="g-4 movie-card">
+    <Row xs={2} md={4} className="g-4 movie-card">
       {props.movieList.map((item) => (
         <Col key={nanoid()}>
           <Card>
@@ -41,7 +42,7 @@ function Movies(props) {
                       return props.updateFavCounter();
                     } else {
                       props.favoritesArray.push(item); //Add item to favorites
-                      console.log(item)
+                      console.log(item);
                       return props.updateFavCounter();
                     }
                   }}

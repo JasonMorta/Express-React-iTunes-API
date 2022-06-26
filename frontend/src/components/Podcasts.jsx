@@ -3,6 +3,7 @@ import Table from "react-bootstrap/Table";
 import { nanoid } from "nanoid";
 import FavIcon from "./FavIcon";
 
+  //This component will be exported to the NavigationTabs component, and rendered there.
 export default function Podcasts(props) {
   //convert milliseconds to minutes and seconds.
   function convert(millis) {

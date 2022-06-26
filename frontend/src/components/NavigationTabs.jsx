@@ -5,7 +5,11 @@ import Music from "./Music";
 import MusicVideos from "./MusicVideos";
 import Podcasts from "./Podcasts";
 import Movies from "./Movies";
-import TvShows from './TvShows'
+import TvShows from "./TvShows";
+
+//This is the navigation tabs for each category.
+//These tabs are all bootstrap components.
+//Selecting a tab will display the content found from the search results if any exists
 
 export default function NavigationTabs(props) {
   const style = {
@@ -13,6 +17,7 @@ export default function NavigationTabs(props) {
     overflow: "auto",
   };
   //These values will be used to display the amount of items found.
+  //Next to each tab name will be a number equal to the found results.
   let totalSongs = props.songList;
   let totalMovies = props.movieList;
   let totalMusicVideos = props.musicVideosList;
@@ -20,12 +25,13 @@ export default function NavigationTabs(props) {
   let totalTVshows = props.tvShows;
 
   return (
-    <Tabs
+    <Tabs // This is the container for all the tabs
       defaultActiveKey="tab1"
       id="uncontrolled-tab-example"
       className="mb-3"
     >
-      <Tab
+      
+      <Tab // Music tab
         eventKey="tab1"
         title={totalSongs.length === 0 ? `Music` : `Music ${totalSongs.length}`}
         style={style}
@@ -38,7 +44,7 @@ export default function NavigationTabs(props) {
         />
       </Tab>
 
-      <Tab
+      <Tab // Music Video tab
         eventKey="tab2"
         title={
           totalMusicVideos.length === 0
@@ -53,7 +59,8 @@ export default function NavigationTabs(props) {
           updateFavCounter={props.updateFavCounter}
         />
       </Tab>
-      <Tab
+
+      <Tab // Movies Tab
         eventKey="tab3"
         title={
           totalMovies.length === 0 ? `Movies` : `Movies ${totalMovies.length}`
@@ -66,7 +73,8 @@ export default function NavigationTabs(props) {
           updateFavCounter={props.updateFavCounter}
         />
       </Tab>
-      <Tab
+
+      <Tab // Podcasts Tab
         eventKey="tab4"
         title={
           totalPodcasts.length === 0
@@ -81,7 +89,8 @@ export default function NavigationTabs(props) {
           favoritesArray={props.favoritesArray}
         />
       </Tab>
-      <Tab
+
+      <Tab // Tv Shows Tab
         eventKey="tab5"
         title={
           totalTVshows.length === 0
@@ -89,12 +98,13 @@ export default function NavigationTabs(props) {
             : `TV Shows ${totalTVshows.length}`
         }
       >
-       < TvShows
+        <TvShows
           tvShows={props.tvShows}
           favoritesArray={props.favoritesArray}
           updateFavCounter={props.updateFavCounter}
-          />
+        />
       </Tab>
+
     </Tabs>
   );
 }

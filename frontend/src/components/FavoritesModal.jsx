@@ -1,6 +1,6 @@
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
-import ModalTable from './ModalTable';
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
+import ModalTable from "./ModalTable";
 
 //The FavoriteModal will display a table with all the favorite items.
 //The button to open the Modal will be placed in App.js
@@ -21,14 +21,15 @@ function FavoritesModal(props) {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-          <ModalTable
-            favoritesArray={props.favoritesArray}
-            refreshState={props.refreshState}
-            />
+        <ModalTable
+          favoritesArray={props.favoritesArray}
+          refreshState={props.refreshState}
+        />
       </Modal.Body>
       <Modal.Footer>
-        
-        <Button onClick={props.onHide} className="modalBtn">Close</Button>
+        <Button onClick={props.onHide} className="modalBtn">
+          Close
+        </Button>
       </Modal.Footer>
     </Modal>
   );

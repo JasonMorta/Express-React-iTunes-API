@@ -4,9 +4,8 @@ import Row from "react-bootstrap/Row";
 import FavIcon from "./FavIcon";
 import { nanoid } from "nanoid";
 
+//This component will be exported to the NavigationTabs component, and rendered there.
 function TvShows(props) {
-
-
   //md: items per row
   return (
     <Row xs={2} md={4} className="g-4 movie-card tv-card">
@@ -20,7 +19,7 @@ function TvShows(props) {
               </Card.Title>
               <Card.Text>{item.shortDescription}</Card.Text>
               <Card.Text>Rated: {item.contentAdvisoryRating}</Card.Text>
-              <div  style={{ width: "fit-content" }}>
+              <div style={{ width: "fit-content" }}>
                 <FavIcon
                   //This method maps over every item.trackId inside favoritesArray.
                   //The .find() method looks for the current item.trackId(songList.map(item...)) inside the favoritesArray, every time AddToFavoritesArray() is called.

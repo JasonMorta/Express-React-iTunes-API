@@ -4,12 +4,16 @@ import Row from "react-bootstrap/Row";
 import FavIcon from "./FavIcon";
 import { nanoid } from "nanoid";
 
+  //This component will be exported to the NavigationTabs component, and rendered there.
 function MusicVideos(props) {
   function updateFavCounter() {
     return props.updateFavCounter();
   }
 
   return (
+
+    //md: items per row
+    //xs: mobile view grouping = 2 items next to each other
     <Row xs={2} md={4} className="g-4 music-videos-card">
       {props.musicVideosList.map((item) => (
         <Col key={nanoid()}>
@@ -30,15 +34,15 @@ function MusicVideos(props) {
                       ? true
                       : false
                   }
-                  //When adding to favorites, click the heart again will remove it from favorites.
+                  //When adding to favorites, click the heart icon again will remove it from favorites.
                   favoritesArray={props.favoritesArray}
                   addToFavoritesArray={() => {
                     let index = props.favoritesArray.indexOf(item);
                     if (index !== -1) {
-                      props.favoritesArray.splice(index, 1); //Remove item from favorites
+                      props.favoritesArray.splice(index, 1); //Removes item from favorites array
                       return props.updateFavCounter();
                     } else {
-                      props.favoritesArray.push(item); //Add item to favorites
+                      props.favoritesArray.push(item); //Adds item to favorites array
                       return props.updateFavCounter();
                     }
                   }}
