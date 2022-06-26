@@ -375,3 +375,24 @@ tbody tr:hover {
   outline: 0;
   box-shadow: inset 0 0 0 0.19rem rgb(0 150 175 / 28%);
 }
+
+.my-id {
+  color: black;
+  font-size: xx-small;
+  position: absolute;
+  bottom: 9px;
+  background-color: whitesmoke;
+  border: 2px solid whitesmoke;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin: 0;
+  z-index: 12;
+}
+
+.my-id a {
+  color: #8f15ad;
+}
+
+.my-id a:visited{
+  color: #8f15ad;
+}

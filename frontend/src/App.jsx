@@ -199,6 +199,17 @@ export default class App extends Component {
     return (
       <div className="App">
         <div className="iTune-container">
+          <p className="my-id">
+            CREATED BY:
+            <a
+              href="https://github.com/JasonMorta?tab=repositories"
+              target="_blank"
+              rel="noreferrer"
+              title="GitHub Profile"
+            >
+              JASON MORTA
+            </a>
+          </p>
           <div className="header-content">
             <img src={logo} alt="design-logo" />
           </div>
