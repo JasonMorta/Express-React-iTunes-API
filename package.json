@@ -4,7 +4,7 @@
   "description": "Get media from itunes",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "start": "nodemon app.js",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
@@ -16,6 +16,7 @@
     "helmet": "^5.1.0",
     "isomorphic-fetch": "^3.0.0",
     "nodemon": "^2.0.16",
+    "react-test-renderer": "^18.2.0",
     "request": "^2.88.2"
   },
   "engines": {

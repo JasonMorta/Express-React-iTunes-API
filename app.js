@@ -3,33 +3,30 @@ const app = express();
 const fs = require('fs');
 const path = require('path')
 const fetch = require('isomorphic-fetch');
-const bodyParser = require('body-parser');
+//let itunesData = fs.readFileSync('itunesData.json');
 const helmet = require("helmet");
-
 
 /* If we want our Express server to be able to access content that is passed in the body of the HTTP request, 
 we need to include the body-parser middleware. 
 The body-parser middleware extracts the entire body portion of an incoming request stream and exposes it on req.body.*/
-
+const bodyParser = require('body-parser');
 app.use(bodyParser.json())
-
-
 app.use(express.json()) // for parsing application/json
-app.use(express.urlencoded({extended: false})) // for parsing application/x-www-form-urlencoded
-
-
+app.use(express.urlencoded({
+   extended: false
+})) // for parsing application/x-www-form-urlencoded
 app.use(helmet());
 
 
 
 
-//ALL
+//Songs
 app.post('/songs', (req, res) => {
    fetch(`https://itunes.apple.com/search?term=${req.body.name}&limit=100&media=music`)
       .then(res => res.json())
       .then(
          (JSONobject) => {
-           
+
             res.send(JSONobject)
          },
          (error) => {
@@ -43,7 +40,7 @@ app.post('/movie', (req, res) => {
       .then(res => res.json())
       .then(
          (JSONobject) => {
-           
+
             res.send(JSONobject)
          },
          (error) => {
@@ -58,7 +55,7 @@ app.post('/musicVideos', (req, res) => {
       .then(res => res.json())
       .then(
          (JSONobject) => {
-        
+
             res.send(JSONobject)
          },
          (error) => {
@@ -72,7 +69,7 @@ app.post('/TVshows', (req, res) => {
       .then(res => res.json())
       .then(
          (JSONobject) => {
-          
+
             res.send(JSONobject)
          },
          (error) => {
@@ -86,7 +83,7 @@ app.post('/podcasts', (req, res) => {
       .then(res => res.json())
       .then(
          (JSONobject) => {
-          
+
             res.send(JSONobject)
          },
          (error) => {
@@ -109,5 +106,3 @@ const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
    console.log(`Server is listening on port ${PORT}`);
 });
-
-
