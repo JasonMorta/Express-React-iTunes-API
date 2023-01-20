@@ -20,7 +20,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "https://express-react-itunes-api-production.up.railway.app/",
+  "proxy": "http://localhost:5906",
   "eslintConfig": {
     "extends": [
       "react-app",
