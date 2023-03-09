@@ -15,9 +15,14 @@ app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({
    extended: false
 })) // for parsing application/x-www-form-urlencoded
-app.use(helmet());
+//app.use(helmet());
 
 
+//Listening on port 8080
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+   console.log(`Server is listening on port ${PORT}`);
+});
 
 
 //Songs
@@ -101,8 +106,4 @@ if (process.env.NODE_ENV === 'production') {
    });
 }
 
-//Listening on port 8080
-const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => {
-   console.log(`Server is listening on port ${PORT}`);
-});
+
