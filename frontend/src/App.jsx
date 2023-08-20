@@ -73,8 +73,14 @@ export default class App extends Component {
           name: this.state.inputValue,
         }),
       })
-        .then((res) => res.json())
+        .then((res) => {
+          if (!res.ok) {
+            throw new Error(`Request failed with status: ${res.status}`);
+          }
+          return res.json();
+        })
         .then((response) => {
+          console.log('response', response)
           this.setState(
             {
               itunesSongs: response,
