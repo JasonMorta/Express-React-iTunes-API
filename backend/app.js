@@ -24,9 +24,14 @@ app.listen(PORT, () => {
    console.log(`Server is listening on port ${PORT}`);
 });
 
+//Middleware
+const checkReqBody = (req, res, next) => {
+   console.log(req.body)
+}
+
 
 //Songs
-app.post('/songs', (req, res) => {
+app.post('/songs', checkReqBody, (req, res) => {
    console.log('request made')
    fetch(`https://itunes.apple.com/search?term=${req.body.name}&limit=100&media=music`)
       .then(res => res.json())
