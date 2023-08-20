@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha",
     "start": "nodemon app.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+    "build": "npm run build"
   },
   "author": "",
   "license": "ISC",
