@@ -25,7 +25,10 @@ app.use(express.urlencoded({
 // CORS is a node.js package for providing a Connect/Express middleware that can be used to enable CORS with various options.
 
 // CORS middleware
-app.use(cors());
+// Allow requests from multiple origins
+app.use(cors({
+   origin: ['https://ituned.onrender.com/']
+ }));
 
 
 //Listening on port 8080
