@@ -125,7 +125,7 @@ export default class App extends Component {
           });
         })
         .catch((error) => console.log("Error:", error));
-
+console.count("rerender")
       //Get podcasts
       fetch("/TVshows", {
         method: "POST",

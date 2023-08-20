@@ -2,6 +2,7 @@ import React from "react";
 import Table from "react-bootstrap/Table";
 import { nanoid } from "nanoid";
 import FavIcon from "./FavIcon";
+import { useMemo } from "react";
 
   //This component will be exported to the NavigationTabs component, and rendered there.
 export default function Music(props) {
@@ -19,6 +20,9 @@ export default function Music(props) {
 
   //LOOP through each item
   let num = 0;
+
+ console.count('props.songList: ',props.songList)
+
 
   let songData = props.songList
     .filter((kind) => kind.kind === "song")
@@ -65,6 +69,8 @@ export default function Music(props) {
     return props.updateFavCounter();
   }
 
+  const songs = useMemo(()=> songData, [songData])
+
   return (
     <Table striped bordered hover onClick={updateFavCounter} responsive>
       <thead>
@@ -77,7 +83,7 @@ export default function Music(props) {
           <th>Fav</th>
         </tr>
       </thead>
-      <tbody style={style}>{songData}</tbody>
+      <tbody style={style}>{songs}</tbody>
     </Table>
   );
 }
