@@ -27,6 +27,7 @@ app.listen(PORT, () => {
 
 //Songs
 app.post('/songs', (req, res) => {
+   console.log('request made')
    fetch(`https://itunes.apple.com/search?term=${req.body.name}&limit=100&media=music`)
       .then(res => res.json())
       .then(
