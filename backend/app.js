@@ -27,7 +27,7 @@ app.use(express.urlencoded({
 // CORS middleware
 // Allow requests from multiple origins
 app.use(cors({
-   origin: ['https://ituned.onrender.com/']
+   origin: ['https://ituned.onrender.com/*']//  The '*' wildcard will allow requests from all origins.
  }));
 
 
