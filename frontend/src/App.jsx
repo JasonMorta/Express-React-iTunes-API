@@ -62,7 +62,7 @@ export default class App extends Component {
         changeHeart: "",
         loading: true,
       });
-
+      console.log("inputValue: " + this.state.inputValue);
       //Get Songs
       fetch("/songs", {
         method: "POST",
