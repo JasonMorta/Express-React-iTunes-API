@@ -3,6 +3,7 @@ const app = express();
 const fs = require('fs');
 const path = require('path')
 const fetch = require('isomorphic-fetch');
+const cors = require('cors');
 //let itunesData = fs.readFileSync('itunesData.json');
 const helmet = require("helmet");
 
@@ -16,6 +17,15 @@ app.use(express.urlencoded({
    extended: false
 })) // for parsing application/x-www-form-urlencoded
 //app.use(helmet());
+
+
+// CORS: Cross-Origin Resource Sharing (CORS) is a mechanism that uses additional 
+// HTTP headers to tell browsers to give a web application running at one origin.
+
+// CORS is a node.js package for providing a Connect/Express middleware that can be used to enable CORS with various options.
+
+// CORS middleware
+app.use(cors());
 
 
 //Listening on port 8080
