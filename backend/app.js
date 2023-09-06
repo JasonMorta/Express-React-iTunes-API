@@ -26,9 +26,20 @@ app.use(express.urlencoded({
 
 // CORS middleware
 // Allow requests from multiple origins
-app.use(cors({
-   origin: ['https://ituned.onrender.com/*']//  The '*' wildcard will allow requests from all origins.
- }));
+// app.use(cors({
+//    origin: ['https://ituned.onrender.com/*']//  The '*' wildcard will allow requests from all origins.
+//  }));
+
+
+ //Render serve frontend build files
+// Serve static files from the 'build' directory
+app.use(express.static(path.join(__dirname, 'frontend/build')));
+
+// Handle all other routes by serving the 'index.html' file
+app.get('*', (req, res) => {
+   res.sendFile(path.join(__dirname, 'frontend/build/index.html'));
+ });
+
 
 
 //Listening on port 8080
@@ -118,12 +129,14 @@ app.post('/podcasts', (req, res) => {
 
 
 /* For Heroku Deployment */
-if (process.env.NODE_ENV === 'production') {
-   app.use(express.static(path.join(__dirname, 'frontend/build')));
-   app.get('*', (req, res) => {
-      res.sendFile(path.resolve(__dirname,
-         'frontend', 'build', 'index.html'));
-   });
-}
+// if (process.env.NODE_ENV === 'production') {
+//    app.use(express.static(path.join(__dirname, 'frontend/build')));
+//    app.get('*', (req, res) => {
+//       res.sendFile(path.resolve(__dirname,
+//          'frontend', 'build', 'index.html'));
+//    });
+// }
+
+
 
 
