@@ -50,7 +50,7 @@ app.listen(PORT, () => {
 
 //Middleware
 const checkReqBody = (req, res, next) => {
-   console.log(req.body)
+   console.log("request made")
    next()
 }
 
