@@ -64,7 +64,7 @@ export default class App extends Component {
       });
       console.log("inputValue: " + this.state.inputValue);
       //Get Songs
-      fetch("/songs", {
+      fetch("https://itunedbackend.onrender.com/songs", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -93,7 +93,7 @@ export default class App extends Component {
         .catch((error) => console.log("Error:", error));
 
       //Get Movies
-      fetch("/movie", {
+      fetch("https://itunedbackend.onrender.com/movie", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -133,7 +133,7 @@ export default class App extends Component {
         .catch((error) => console.log("Error:", error));
 console.count("rerender")
       //Get podcasts
-      fetch("/TVshows", {
+      fetch("https://itunedbackend.onrender.com/TVshows", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -153,7 +153,7 @@ console.count("rerender")
         .catch((error) => console.log("Error:", error));
 
       //Get podcasts
-      fetch("/podcasts", {
+      fetch("https://itunedbackend.onrender.com/podcasts", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
