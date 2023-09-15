@@ -5,7 +5,7 @@ const path = require('path')
 const fetch = require('isomorphic-fetch');
 const cors = require('cors');
 //let itunesData = fs.readFileSync('itunesData.json');
-const helmet = require("helmet");
+//const helmet = require("helmet");
 
 /* If we want our Express server to be able to access content that is passed in the body of the HTTP request, 
 we need to include the body-parser middleware. 
@@ -27,19 +27,8 @@ app.use(express.urlencoded({
 // CORS middleware
 // Allow requests from multiple origins
 app.use(cors({
-   origin: ['https://ituned.onrender.com/*']//  The '*' wildcard will allow requests from all origins.
+   origin: "*", //  The '*' wildcard will allow requests from all origins.
  }));
-
-
- //Render serve frontend build files
-// Serve static files from the 'build' directory
-app.use(express.static(path.join(__dirname, '../frontend/build/*')));
-
-// Handle all other routes by serving the 'index.html' file
-app.get('*', (req, res) => {
-   res.sendFile(path.join(__dirname, '../frontend/build/index.html'));
- });
-
 
 
 //Listening on port 8080
