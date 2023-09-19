@@ -50,7 +50,9 @@ const checkReqBody = (req, res, next) => {
 * and you can ensure that your server is always responsive and ready to handle traffic.
 */
 app.get('/health', (req, res) => {
-   console.log(res.status(200))
+   if (res.statusCode === 200) {
+      console.log('Server is healthy and running on Render');
+   }
 });
 
 
