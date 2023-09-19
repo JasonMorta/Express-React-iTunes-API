@@ -44,6 +44,16 @@ const checkReqBody = (req, res, next) => {
 }
 
 
+// Health check endpoint: This endpoint will be used to check if the server is healthy and running on Render.
+/* 
+* Provide a reliable way for the monitoring system to check the status of your server, 
+* and you can ensure that your server is always responsive and ready to handle traffic.
+*/
+app.get('/health', (req, res) => {
+   res.status(200).send('Server is healthy');
+ });
+
+
 //Songs
 app.post('/songs', checkReqBody, (req, res) => {
    console.log('request made')
