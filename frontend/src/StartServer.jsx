@@ -16,8 +16,8 @@ export default function StartServer() {
                     console.log( `%c Started`, 'color: Green')
                 })
                 .catch((error) => {
-                    console.log(`%c Error`, 'color: red')
-                    console.error(error)});
+                    console.log(`%c ${error}`, 'color: Yellow')
+                });
          }
          fetchData()
     }, [])
