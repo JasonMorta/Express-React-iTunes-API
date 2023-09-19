@@ -5,18 +5,21 @@ export default function StartServer() {
     //start the API server
     useEffect(() => {
      
-        console.log('starting')
-           fetch("https://itunedbackend.onrender.com/ping", {
-            method: "GET",
-          })
-            .then((response) => response.json())
-            .then((data) => { 
-                console.log( `%c Started`, 'color: Green')
-            })
-            .catch((error) => {
-                console.log(`%c Error`, 'color: red')
-                console.error(error)});
-       
+     
+         async function fetchData() {
+            console.log('starting')
+            fetch("https://itunedbackend.onrender.com/ping", {
+                method: "GET",
+              })
+                .then((response) => response.json())
+                .then((data) => { 
+                    console.log( `%c Started`, 'color: Green')
+                })
+                .catch((error) => {
+                    console.log(`%c Error`, 'color: red')
+                    console.error(error)});
+         }
+         fetchData()
     }, [])
     
 }
