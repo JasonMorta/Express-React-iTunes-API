@@ -28,7 +28,7 @@ app.use(express.urlencoded({
 // Allow requests from multiple origins
 app.use(cors({
    origin: "*", //  The '*' wildcard will allow requests from all origins.
- }));
+}));
 
 
 //Listening on port 8080
@@ -51,7 +51,17 @@ const checkReqBody = (req, res, next) => {
 */
 app.get('/health', (req, res) => {
    res.status(200).send('Server is healthy');
- });
+});
+
+
+//Server ping endpoint: This endpoint will be used to start the server on render, as soon as a user uses the frontend.
+app.get('/ping', (req, res) => {
+   if (response.status === 200) {
+   res.status(200).send('pong');
+   } else {
+   res.status(500).send('error');
+   }
+});
 
 
 //Songs
