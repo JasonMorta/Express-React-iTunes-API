@@ -49,11 +49,11 @@ const checkReqBody = (req, res, next) => {
 * Provide a reliable way for the monitoring system to check the status of your server, 
 * and you can ensure that your server is always responsive and ready to handle traffic.
 */
-app.get('/health', (req, res) => {
-   if (res.statusCode === 200) {
-      console.log('Server is healthy and running on Render');
-   }
-});
+// app.get('/health', (req, res) => {
+//    if (res.statusCode === 200) {
+//       console.log('Server is healthy and running on Render');
+//    }
+// });
 
 
 //Server ping endpoint: This endpoint will be used to start the server on render, as soon as a user uses the frontend.
