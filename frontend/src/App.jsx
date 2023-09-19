@@ -40,6 +40,9 @@ export default class App extends Component {
     };
   }
 
+
+  
+
   //SEARCH button
   searchBtn = () => {
     //Validation: The user must enter a value to get results from search.
