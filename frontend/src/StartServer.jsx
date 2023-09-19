@@ -10,8 +10,12 @@ export default function StartServer() {
             method: "GET",
           })
             .then((response) => response.json())
-            .then((data) => { console.log( data)})
-            .catch((error) => console.error(error));
+            .then((data) => { 
+                console.log( `%c Started`, 'color: Green')
+            })
+            .catch((error) => {
+                console.log(`%c Error`, 'color: red')
+                console.error(error)});
        
     }, [])
     
