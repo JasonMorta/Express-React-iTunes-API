@@ -5,7 +5,8 @@ export default function StartServer() {
     //start the API server
     useEffect(() => {
      
-           fetch("https://itunedbackend.onrender.com/health", {
+        console.log('starting')
+           fetch("https://itunedbackend.onrender.com/ping", {
             method: "GET",
           })
             .then((response) => response.json())

@@ -8,8 +8,8 @@ import StartServer from './StartServer';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
     <StartServer />
+    <App />
   </React.StrictMode>
 );
 
