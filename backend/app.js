@@ -56,7 +56,6 @@ app.get('/health', (req, res) => {
 
 //Server ping endpoint: This endpoint will be used to start the server on render, as soon as a user uses the frontend.
 app.get('/ping', (req, res) => {
-   
    res.status(200).send('pong');
   
 });
