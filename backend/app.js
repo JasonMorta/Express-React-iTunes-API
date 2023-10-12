@@ -31,11 +31,7 @@ app.use(cors({
 }));
 
 
-//Listening on port 8080
-const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => {
-   console.log(`Server is listening on port ${PORT}`);
-});
+
 
 //Middleware
 const checkReqBody = (req, res, next) => {
@@ -57,12 +53,11 @@ const checkReqBody = (req, res, next) => {
 
 
 //Server ping endpoint: This endpoint will be used to start the server on render, as soon as a user uses the frontend.
-app.get('/ping', (req, res) => {
-   if (res.statusCode === 200) {
-      console.log('Server has started');
-      res.send('Server has started');
-   }
-});
+app.get('/keep-alive', (req, res) => {
+   res.status(200).send('Server is alive');
+ });
+
+
 
 
 //Songs
@@ -150,3 +145,39 @@ app.post('/podcasts', (req, res) => {
 
 
 
+//Listening on port 8080
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+   console.log(`Server is listening on port ${PORT}`);
+
+
+      // Function to send a keep-alive request every 14 minutes (840,000 milliseconds)
+      function sendKeepAliveRequest() {
+         const options = {
+           hostname: 'https://itunedbackend.onrender.com', // Replace with your server's hostname
+           port: 8080, // Use the appropriate port
+           path: '/keep-alive', // The keep-alive endpoint
+           method: 'GET',
+         };
+     
+         //http.request() returns an instance of the http.ClientRequest class.
+         // 
+         const req = http.request(options, (res) => {
+           // Do nothing on response
+         });
+     
+         req.on('error', (error) => {
+           console.error(`Error sending keep-alive request: ${error}`);
+         });
+     
+         req.end();
+       }
+     
+       // Send the initial keep-alive request
+       sendKeepAliveRequest();
+     
+       // Set up a 14-minute interval for sending keep-alive requests
+       setInterval(sendKeepAliveRequest, 840000); // 14 minutes in milliseconds
+
+
+});
