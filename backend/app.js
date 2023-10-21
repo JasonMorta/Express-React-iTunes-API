@@ -154,31 +154,25 @@ app.listen(PORT, () => {
 
       // Function to send a keep-alive request every 14 minutes (840,000 milliseconds)
       function sendKeepAliveRequest() {
-         const options = {
-           hostname: 'https://itunedbackend.onrender.com', // Replace with your server's hostname
-           port: 8080, // Use the appropriate port
-           path: '/keep-alive', // The keep-alive endpoint
-           method: 'GET',
-         };
-     
-         //http.request() returns an instance of the http.ClientRequest class.
-         // 
-         const req = http.request(options, (res) => {
-           // Do nothing on response
+         app.post('/podcasts', (req, res) => {
+            fetch(`https://itunes.apple.com/search?term=x&limit=1&media=podcast`)
+               .then(res => res.json())
+               .then(
+                  (JSONobject) => {
+         
+                     console.log(JSONobject)
+                  },
+                  (error) => {
+                     console.log(error)
+                  })
          });
-     
-         req.on('error', (error) => {
-           console.error(`Error sending keep-alive request: ${error}`);
-         });
-     
-         req.end();
        }
      
        // Send the initial keep-alive request
        sendKeepAliveRequest();
      
        // Set up a 14-minute interval for sending keep-alive requests
-       setInterval(sendKeepAliveRequest, 840000); // 14 minutes in milliseconds
+       setInterval(sendKeepAliveRequest, 5000); // 14 minutes in milliseconds
 
 
 });
